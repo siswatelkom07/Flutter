@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/column_row.dart';
 import 'package:flutter_application_1/date.dart';
 import 'package:flutter_application_1/dialog.dart';
 import 'package:flutter_application_1/input.dart';
@@ -28,6 +29,7 @@ class Scaffoldwidget extends StatelessWidget {
                 fontWeight: FontWeight.bold,
               ),
             ),
+             ColumnRow(),
              DialogWidget(),
              InputSelection(),
              const DateWidget(title: '',)
