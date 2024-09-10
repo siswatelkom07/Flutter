@@ -7,7 +7,7 @@ class Cobacoba extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: const Color.fromARGB(255, 242, 242, 242),
-      body: SingleChildScrollView( // Wrap the entire body in a scrollable view
+      body: SingleChildScrollView(
         child: Column(
           children: [
             Container(
@@ -70,7 +70,8 @@ class Cobacoba extends StatelessWidget {
                       children: [
                         Icon(Icons.notification_add_outlined,
                             size: 35, color: Colors.white),
-                        Icon(Icons.menu_outlined, size: 35, color: Colors.white),
+                        Icon(Icons.menu_outlined,
+                            size: 35, color: Colors.white),
                       ],
                     ),
                   ),
@@ -98,7 +99,7 @@ class Cobacoba extends StatelessWidget {
                 color: Color.fromARGB(255, 241, 241, 241),
                 borderRadius: BorderRadius.circular(15),
               ),
-              height: 200, 
+              height: 200,
               child: GridView.count(
                 crossAxisCount: 5,
                 mainAxisSpacing: 10,
@@ -165,8 +166,6 @@ class Cobacoba extends StatelessWidget {
                       ),
                     ],
                   ),
-
-                  // Second Row
                   Column(
                     children: [
                       Image(
@@ -234,9 +233,44 @@ class Cobacoba extends StatelessWidget {
             Container(
               width: double.infinity,
               height: 250,
-              child: Image(
-                image: AssetImage("assets/images/Ball.jpg"),
-                fit: BoxFit.contain,
+              child: Stack(
+                children: [
+                  Image(
+                    image: AssetImage("assets/images/montverde.jpg"),
+                    fit: BoxFit.contain,
+                    width: double.infinity,
+                  ),
+                  Positioned(
+                      top: 10,
+                      left: 40,
+                      right: 0,
+                      child: Align(
+                        alignment: Alignment.topLeft,
+                        child: Text(
+                          "Featured News",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 25,
+                            fontWeight: FontWeight.bold
+                          ),
+                        ),
+                      )),
+                  Positioned(
+                    bottom: 10,
+                    left: 0,
+                    right: 0,
+                    child: Align(
+                      alignment: Alignment.center,
+                      child: Text(
+                        "Montverde ready to take on the season",
+                        style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
